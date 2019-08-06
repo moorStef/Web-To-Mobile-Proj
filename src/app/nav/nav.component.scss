@@ -1,0 +1,18 @@
+@import '~@angular/material/theming';
+
+.example-app-name {
+    margin: 20px !important;
+    font-size: 1em;
+
+    &:hover {
+        text-decoration: none;
+        color: whitesmoke !important;
+    }
+}
+
+.mat-menu-item {
+    &:hover {
+        text-decoration: none;
+        color: whitesmoke !important;
+    }
+}
