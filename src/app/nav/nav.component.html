@@ -1,0 +1,11 @@
+
+<div class="example-nav-bar">
+  <mat-toolbar color="primary" class="example-toolbar">
+      <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+      <mat-menu #menu="matMenu" color="accent">
+        <a mat-menu-item color="accent" href="/home">Home</a>
+        <a mat-menu-item color="accent" href="/material">Components</a>
+      </mat-menu>
+    <a mat-button href="/home" class="example-app-name">Angular Material</a>
+  </mat-toolbar>
+</div>
