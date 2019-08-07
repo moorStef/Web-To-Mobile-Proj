@@ -10,6 +10,8 @@ import { AngularmaterialModule } from '../app/angularmaterial/angularmaterial.mo
 import { MaterialComponentsComponent } from './material-components/material-components.component';
 import { FooterComponent } from './footer/footer.component';
 import { NativeComponent } from './native/native.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { NativeComponent } from './native/native.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularmaterialModule
+    AngularmaterialModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
