@@ -1,4 +1,32 @@
-.title-center {
+
+
+.text-center {
     flex: 1 1 auto;
     text-align: center;
 }
+
+footer {
+
+    padding-top: 1em !important;
+    position: relative;
+  }
+
+  #btnSocial {
+    color: whitesmoke;
+    font-size: 2em;
+  }
+
+  footer a, span {
+    padding: 10px;
+    transition: all .3s ease;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+ 
+  footer a:hover {
+    color: palegreen !important;
+  }
+
+  #txtCopyright {
+    font-size: 15px;
+  }

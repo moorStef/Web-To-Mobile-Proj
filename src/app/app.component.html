@@ -1,16 +1,18 @@
 
-  <mat-sidenav-container>
+  <mat-sidenav-container class="sidenav">
     <mat-sidenav #sidenav role="navigation">
     </mat-sidenav>
-    <mat-sidenav-content>
+    <mat-sidenav-content fxLayout="column" class="nav-content">    
       <app-nav></app-nav>
-      <router-outlet></router-outlet>    
+        <main class="content">
+          <router-outlet></router-outlet>  
+        </main>
+      <app-footer></app-footer>   
     </mat-sidenav-content>
   </mat-sidenav-container>
 
-<div class="page-footer">
-  <app-footer></app-footer>
-</div>
+
+
 
 <!-- <div class="mat-app-background basic-container">
   <app-nav></app-nav>
