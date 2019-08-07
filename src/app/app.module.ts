@@ -9,6 +9,7 @@ import { NavComponent } from './nav/nav.component';
 import { AngularmaterialModule } from '../app/angularmaterial/angularmaterial.module';
 import { MaterialComponentsComponent } from './material-components/material-components.component';
 import { FooterComponent } from './footer/footer.component';
+import { NativeComponent } from './native/native.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     NavComponent,
     MaterialComponentsComponent,
-    FooterComponent
+    FooterComponent,
+    NativeComponent
   ],
   imports: [
     BrowserModule,
