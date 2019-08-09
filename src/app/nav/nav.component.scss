@@ -1,12 +1,18 @@
 @import '~@angular/material/theming';
+a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.5s ease !important;
+    &:hover {
+        color: palegreen;
+    }
+}
 
-.example-app-name {
-    margin: 20px !important;
-    font-size: 1em;
+.icon {
+    transition: background-color 0.5s ease !important;
 
     &:hover {
-        text-decoration: none;
-        color: whitesmoke !important;
+        background-color: palegreen !important;
     }
 }
 

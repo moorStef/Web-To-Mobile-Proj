@@ -1,11 +1,15 @@
 .sidenav {
     min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+
 }
  
 .nav-content {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; // same height as browser window height
+    min-height: 100vh;
+    max-height: 100vh;
 }
  
 .content {

@@ -1,21 +1,11 @@
-
-  <mat-sidenav-container class="sidenav">
-    <mat-sidenav #sidenav role="navigation">
-    </mat-sidenav>
-    <mat-sidenav-content fxLayout="column" class="nav-content">    
-      <app-nav></app-nav>
-        <main class="content">
-          <router-outlet></router-outlet>  
-        </main>
-      <app-footer></app-footer>   
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-
-
-
-
-<!-- <div class="mat-app-background basic-container">
-  <app-nav></app-nav>
-</div>
-
-<router-outlet></router-outlet> -->
+<mat-sidenav-container class="sidenav" autosize>
+  <mat-sidenav #sidenav role="navigation">
+  </mat-sidenav>
+  <mat-sidenav-content fxLayout="column" class="nav-content">
+    <app-nav></app-nav>
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
