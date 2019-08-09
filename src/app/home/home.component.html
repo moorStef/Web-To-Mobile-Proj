@@ -8,9 +8,7 @@
 			<img class="card-img" mat-card-image src="../../assets/icons/icon-384x384.png" alt="Angular Icon">
 
 			<mat-card-actions class="action-buttons">
-				<a mat-raised-button color="primary" href="/material">Components</a>
-				<a mat-raised-button color="primary" href="/native">Native APIs</a>
-				<a mat-raised-button color="primary" href="/http">HTTP</a>
+					<a *ngFor="let btn of btnnav" mat-raised-button color="primary" routerLink="{{btn.path}}" routerLinkActive="active">{{btn.title}}</a>
 			</mat-card-actions>
 		</mat-card>
 	</span>

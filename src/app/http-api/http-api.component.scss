@@ -1,19 +1,70 @@
 .container {
-    width: 60% !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 60% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .outer-card {
-    margin-top: 20px;
-    max-height: 890px;
-    overflow-y: auto;
+  margin-top: 20px;
+  max-height: 890px;
+  overflow-y: auto;
 }
 
 .center-content {
-    margin: 10px;
-    flex: 1 1 auto;
-    text-align: center;
+  margin: 10px;
+  flex: 1 1 auto;
+  text-align: center;
 }
- 
+
+button {
+    transition: all .3s ease;
+    &:hover {
+        background-color: palegreen;
+        color: darkslategray;
+    }
+}
+
+a {
+    transition: all .3s ease;
+    text-decoration: none;
+    &:hover {
+        background-color: palegreen;
+        color: darkslategray;
+    }
+}
+
+.inner-card, .inner-card-header {
+    justify-content: center;
+    align-content: center;
+  
+}
+
+.inner-card {
+    margin:10px;
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  mat-card-actions {
+    -webkit-flex-direction: row !important;
+    flex-direction: row !important;
+  }
+  mat-card-actions > * {
+    -webkit-flex: 1;
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  mat-card-actions {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  mat-card {
+    width: 300px !important;
+  }
+}

@@ -4,9 +4,9 @@
       <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon class="icon">menu</mat-icon></button>
       <mat-menu  #menu="matMenu" color="accent">
         <div *ngFor="let route of nav">         
-          <a mat-button routerLink="{{route.path}}" routerLinkActive="active" (click)="toggleMobileNav(lnav)">{{route.title}}</a>      
+          <a mat-button routerLink="{{route.path}}" routerLinkActive="active">{{route.title}}</a>      
         </div>
       </mat-menu>
-    <a mat-icon-button href="/#/home" class="icon"><mat-icon>home</mat-icon></a>
+    <a mat-icon-button routerLink="/home" class="icon"><mat-icon>home</mat-icon></a>
   </mat-toolbar>
 </div>

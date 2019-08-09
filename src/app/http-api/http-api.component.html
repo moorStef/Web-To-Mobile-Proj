@@ -1,20 +1,22 @@
 <div class="container">
     <span class="center-content">
-        <mat-card class="outer-card">
-            <mat-card-header>
-                <mat-card-title>Example HTTP Call from https://github.com/HugoGiraudel/SJSJ</mat-card-title>
+        <!-- <mat-card class="outer-card"> -->
+        <h1>
+            HTTP EXAMPLE
+        </h1>
+        <mat-card class="inner-card" *ngFor="let item of items">
+            <mat-card-header class="inner-card-header">
+                <mat-card-title>{{item.name}}</mat-card-title>
             </mat-card-header>
-            <mat-card *ngFor="let item of items">
-                <mat-card-header>
-                    <mat-card-title>{{item.name}}</mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                    {{item.description}}
-                </mat-card-content>
-                <mat-card-actions>
-                    <a mat-raised-button href="{{item.url}}" target="_blank" color="primary">More</a>
-                </mat-card-actions>
-            </mat-card>
+            <mat-card-content>
+                {{item.description}}
+            </mat-card-content>
+            <mat-card-actions>
+                <a mat-raised-button href="{{item.url}}" target="_blank" color="primary">More</a>
+            </mat-card-actions>
         </mat-card>
+     
+        <a mat-button href="https://github.com/HugoGiraudel/SJSJ" target="_blank">Source</a>
+        <!-- </mat-card> -->
     </span>
 </div>
