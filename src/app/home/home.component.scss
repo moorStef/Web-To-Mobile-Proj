@@ -11,8 +11,24 @@
     text-align: center;
 }
 
+.action-buttons a {
+    width: 120px !important;
+    margin: 10px;
+    border: none;
+    text-decoration: none;
+    &:hover {
+        background-color: palegreen;
+        color: darkslategrey;
+      // filter: brightness(150%);
+    }
+}
+
 .card-img {
-   // width: 40% !important;
-    height: 50% !important; 
+    width: 384px;
+    height: auto;
+}
+
+.mat-card-header {
+    justify-content: center;
 }
  
