@@ -1,0 +1,19 @@
+.container {
+    width: 60% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-card {
+    margin-top: 20px;
+    max-height: 890px;
+    overflow-y: auto;
+}
+
+.center-content {
+    margin: 10px;
+    flex: 1 1 auto;
+    text-align: center;
+}
+ 
