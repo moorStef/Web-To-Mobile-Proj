@@ -1,11 +1,12 @@
 {
-  "name": "web-to-mobile-proj",
-  "short_name": "web-to-mobile-proj",
+  "name": "PWAProj",
+  "short_name": "pwa",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
+  "description": "A simple Angular Web App converted to PWA",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
