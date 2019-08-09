@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { NativeComponent } from './native/native.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { HttpClientModule} from '@angular/common/http';
+import { HttpApiComponent } from './http-api/http-api.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,14 @@ import { environment } from '../environments/environment';
     NavComponent,
     MaterialComponentsComponent,
     FooterComponent,
-    NativeComponent
+    NativeComponent,
+    HttpApiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularmaterialModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
