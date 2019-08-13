@@ -1,31 +1,29 @@
 .sidenav {
-    min-height: 100vh;
-    max-height: 100vh;
-    overflow-y: auto;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+}
 
-}
- 
 .nav-content {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: 100vh;
 }
- 
+
 .content {
-    flex: 1;
+  flex: 1;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
- 
-    // Select all direct descendants only of the <main> element
-    // that are not <router-outlet> elements:
-    > *:not(router-outlet) {
- 
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  // Select all direct descendants only of the <main> element
+  // that are not <router-outlet> elements:
+  > *:not(router-outlet) {
     flex: 1; // child will set to an equal size inside the container
     display: block;
- 
   }
 }
