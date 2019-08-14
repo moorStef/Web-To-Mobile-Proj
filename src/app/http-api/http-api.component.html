@@ -1,10 +1,8 @@
-<meta name="Http Example Page" content="Example Http Call using typescript">
 <div class="container">
-    <span class="center-content">
-        <!-- <mat-card class="outer-card"> -->
-        <h1>
-            HTTP EXAMPLE
-        </h1>
+    <h1>
+        HTTP EXAMPLE
+    </h1>
+    <div class="col">
         <mat-card class="inner-card" *ngFor="let item of items">
             <mat-card-header class="inner-card-header">
                 <mat-card-title>{{item.name}}</mat-card-title>
@@ -16,8 +14,7 @@
                 <a mat-raised-button href="{{item.url}}" target="_blank" color="primary">More</a>
             </mat-card-actions>
         </mat-card>
-     
+
         <a mat-button href="https://github.com/HugoGiraudel/SJSJ" target="_blank">Source</a>
-        <!-- </mat-card> -->
-    </span>
+    </div>
 </div>

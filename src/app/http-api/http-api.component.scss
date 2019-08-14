@@ -1,20 +1,11 @@
-.container {
-  width: 60% !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.outer-card {
-  margin-top: 20px;
-  max-height: 890px;
+.col {
+  max-height: 750px;
   overflow-y: auto;
 }
 
-.center-content {
-  margin: 10px;
-  flex: 1 1 auto;
+h1 {
   text-align: center;
+  margin-top: 10px;
 }
 
 button {
@@ -37,12 +28,11 @@ a {
 .inner-card, .inner-card-header {
     justify-content: center;
     align-content: center;
-  
 }
 
 .inner-card {
     margin:10px;
-    width: 100%;
+  //  width: 100%;
 }
 
 @media screen and (min-width: 600px) {
@@ -57,6 +47,7 @@ a {
 }
 
 @media screen and (max-width: 600px) {
+ 
   mat-card-actions {
     -webkit-flex-direction: column;
     flex-direction: column;
@@ -64,7 +55,7 @@ a {
     justify-content: center;
   }
 
-  mat-card {
-    width: 300px !important;
+  .col {
+    max-height: 500px;
   }
 }

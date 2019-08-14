@@ -10,7 +10,6 @@ import { AngularmaterialModule } from '../app/angularmaterial/angularmaterial.mo
 import { MaterialComponentsComponent } from './material-components/material-components.component';
 import { FooterComponent } from './footer/footer.component';
 import { NativeComponent } from './native/native.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HttpClientModule} from '@angular/common/http';
 import { HttpApiComponent } from './http-api/http-api.component';
@@ -29,8 +28,7 @@ import { HttpApiComponent } from './http-api/http-api.component';
     BrowserModule,
     AppRoutingModule,
     AngularmaterialModule,
-    HttpClientModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

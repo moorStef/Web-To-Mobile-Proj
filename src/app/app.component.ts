@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, EventEmitter, Output } from '@angular/core';
+import { Component, ChangeDetectorRef, EventEmitter, Output, OnInit } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material';
 
@@ -8,7 +8,12 @@ import { MatSidenav } from '@angular/material';
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+	constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+		this.mobileQuery = media.matchMedia('(max-width: 600px)');
+		this.mobileQueryListener = () => changeDetectorRef.detectChanges();
+		this.mobileQuery.addListener(this.mobileQueryListener);
+	}
 	title = 'web-to-mobile-proj';
 
 	mobileQuery: MediaQueryList;
@@ -16,10 +21,7 @@ export class AppComponent {
 	private mobileQueryListener: () => void;
 	@Output() toggleSideNav = new EventEmitter();
 
-	constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-		this.mobileQuery = media.matchMedia('(max-width: 600px)');
-		this.mobileQueryListener = () => changeDetectorRef.detectChanges();
-		this.mobileQuery.addListener(this.mobileQueryListener);
+	ngOnInit(): void {
 	}
 
 	toggleMobileNav(nav: MatSidenav) {
