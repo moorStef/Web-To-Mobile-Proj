@@ -1,8 +1,6 @@
 <div class="container">
-    <h1>
-        HTTP EXAMPLE
-    </h1>
-    <div class="col">
+    <h1>HTTP EXAMPLE</h1>
+    <div class="col" *ngIf="status==='ONLINE'">
         <mat-card class="inner-card" *ngFor="let item of items">
             <mat-card-header class="inner-card-header">
                 <mat-card-title>{{item.name}}</mat-card-title>
@@ -16,5 +14,8 @@
         </mat-card>
 
         <a mat-button href="https://github.com/HugoGiraudel/SJSJ" target="_blank">Source</a>
+    </div>
+    <div class="center" *ngIf="status==='OFFLINE'">
+        APP IS OFFLINE!
     </div>
 </div>

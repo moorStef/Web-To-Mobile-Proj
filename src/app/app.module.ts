@@ -11,8 +11,13 @@ import { MaterialComponentsComponent } from './material-components/material-comp
 import { FooterComponent } from './footer/footer.component';
 import { NativeComponent } from './native/native.component';
 import { environment } from '../environments/environment';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HttpApiComponent } from './http-api/http-api.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { InstallPromptComponent } from './install-prompt/install-prompt.component';
+import { DeviceDetectorModule } from 'ngx-device-detector';
+import { ConnectivityComponent } from './connectivity/connectivity.component';
+import { CameraComponent } from './camera/camera.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +27,19 @@ import { HttpApiComponent } from './http-api/http-api.component';
     MaterialComponentsComponent,
     FooterComponent,
     NativeComponent,
-    HttpApiComponent
+    HttpApiComponent,
+    AppComponent,
+    InstallPromptComponent,
+    ConnectivityComponent,
+    CameraComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularmaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    DeviceDetectorModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

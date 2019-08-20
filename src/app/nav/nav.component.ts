@@ -27,11 +27,14 @@ export class NavComponent implements OnInit {
     {
       title: 'Http',
       path: '/http'
+    },
+    {
+      title: 'Camera',
+      path: '/camera'
     }
   ];
 
   ngOnInit(): void {
 
   }
-
 }

@@ -1,16 +1,23 @@
 <meta name="Native API Page" content="Testing using mobile device plugins with PWA">
 <div class="container">
-    <h3>TESTING NATIVE API FEATURES WITH CORDOVA</h3>
+    <mat-table id="table" [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- NAME COLUMN -->
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+            <mat-header-cell *matHeaderCellDef>Value</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+        </ng-container>
 
-    <mat-list>
-        <mat-list-item>Item 1</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>Item 2</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>Item 3</mat-list-item>
-    </mat-list>
+        <!-- VALUE COLUMN -->
+        <ng-container matColumnDef="value">
+            <mat-header-cell *matHeaderCellDef>Value</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.value}}</mat-cell>
+        </ng-container>
 
-    <div class="align-button-right">
-        <button class="btn-refresh" mat-raised-button color="primary">Refresh</button>
-    </div>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <!-- <div class="align-button-right">
+        <button class="btn-refresh" mat-raised-button color="primary" (click)="subscribeToNotifications()">Subscribe</button>
+    </div> -->
 </div>

@@ -3,35 +3,44 @@
   overflow-y: auto;
 }
 
+.center {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-size: 2em;
+}
+
 h1 {
   text-align: center;
   margin-top: 10px;
 }
 
 button {
-    transition: all .3s ease;
-    &:hover {
-        background-color: palegreen;
-        color: darkslategray;
-    }
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: palegreen;
+    color: darkslategray;
+  }
 }
 
 a {
-    transition: all .3s ease;
-    text-decoration: none;
-    &:hover {
-        background-color: palegreen;
-        color: darkslategray;
-    }
+  transition: all 0.3s ease;
+  text-decoration: none;
+  &:hover {
+    background-color: palegreen;
+    color: darkslategray;
+  }
 }
 
-.inner-card, .inner-card-header {
-    justify-content: center;
-    align-content: center;
+.inner-card,
+.inner-card-header {
+  justify-content: center;
+  align-content: center;
 }
 
 .inner-card {
-    margin:10px;
+  margin: 10px;
   //  width: 100%;
 }
 
@@ -47,7 +56,6 @@ a {
 }
 
 @media screen and (max-width: 600px) {
- 
   mat-card-actions {
     -webkit-flex-direction: column;
     flex-direction: column;
