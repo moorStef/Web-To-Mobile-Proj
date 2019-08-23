@@ -7,10 +7,10 @@
       </button>
       <mat-menu #menu="matMenu" color="accent">
         <div *ngFor="let route of nav" aria-labelledby="nav-menu">
-          <a mat-button routerLink="{{route.path}}" routerLinkActive="active">{{route.title}}</a>
+          <a mat-button href="{{route.path}}" routerLinkActive="active">{{route.title}}</a>
         </div>
       </mat-menu>
-      <a mat-icon-button alt="Home" aria-label="Home Button" id="btnHome" routerLink="/" class="icon">
+      <a mat-icon-button alt="Home" aria-label="Home Button" id="btnHome" href="/#/home" class="icon">
         <mat-icon aria-labelledby="btnHome">home</mat-icon>
       </a>
     </mat-toolbar>
