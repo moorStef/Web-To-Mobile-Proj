@@ -15,15 +15,15 @@ export class HomeComponent implements OnInit {
   btnnav = [
       {
         title: 'Components',
-        path: '/material'
+        path: '/#/material'
       },
       {
         title: 'Native APIs',
-        path: '/native'
+        path: '/#/native'
       },
       {
         title: 'Http',
-        path: '/http'
+        path: '/#/http'
       }
   ];
 

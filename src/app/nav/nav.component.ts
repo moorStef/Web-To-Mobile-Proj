@@ -14,7 +14,7 @@ export class NavComponent implements OnInit {
   nav = [
     {
       title: 'Home',
-      path: '/#'
+      path: '/'
     },
     {
       title: 'Components',
