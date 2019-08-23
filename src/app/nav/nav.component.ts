@@ -14,23 +14,23 @@ export class NavComponent implements OnInit {
   nav = [
     {
       title: 'Home',
-      path: '/'
+      path: '/#'
     },
     {
       title: 'Components',
-      path: '/material'
+      path: '/#/material'
     },
     {
       title: 'Native APIs',
-      path: '/native'
+      path: '/#/native'
     },
     {
       title: 'Http',
-      path: '/http'
+      path: '/#/http'
     },
     {
       title: 'Camera',
-      path: '/camera'
+      path: '/#/camera'
     }
   ];
 
