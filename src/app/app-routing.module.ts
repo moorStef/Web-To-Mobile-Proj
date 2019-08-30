@@ -13,12 +13,12 @@ const routes: Routes = [
   { path: 'native', component: NativeComponent },
   { path: 'material', component: MaterialComponentsComponent },
   { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: '*', redirectTo: 'home', pathMatch: 'full'}
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '*', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),
+  imports: [RouterModule.forRoot(routes, { useHash: true }),
   ],
   exports: [RouterModule]
 })

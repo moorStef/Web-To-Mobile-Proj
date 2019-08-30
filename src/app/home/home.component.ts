@@ -13,18 +13,18 @@ export class HomeComponent implements OnInit {
   items: Array<Item>;
 
   btnnav = [
-      {
-        title: 'Components',
-        path: '/material'
-      },
-      {
-        title: 'Native APIs',
-        path: '/native'
-      },
-      {
-        title: 'Http',
-        path: '/http'
-      }
+      // {
+      //   title: 'Components',
+      //   path: '#/material'
+      // },
+      // {
+      //   title: 'Native APIs',
+      //   path: '#/native'
+      // },
+      // {
+      //   title: 'Http',
+      //   path: '#/http'
+      // }
   ];
 
   constructor(private  apiService: ApiService) {  }
