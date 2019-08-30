@@ -3,15 +3,17 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
-import { platform } from '../node_modules/os';
+import {CordovaService} from './app/cordova.service';
 
 if (environment.production) {
   enableProdMode();
 }
 
-declare let window: any;
+// declare let window: any;
 
-const isCordova = !!window.cordova;
+// const isCordova = !!window.cordova;
+
+const isCordova = new CordovaService().isCordova;
 
 const bootstrap = () => {
   console.log('Bootstrapping app');

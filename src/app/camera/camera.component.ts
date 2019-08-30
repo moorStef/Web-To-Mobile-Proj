@@ -5,6 +5,9 @@ import { Component, OnInit, Output } from '@angular/core';
   templateUrl: './camera.component.html',
   styleUrls: ['./camera.component.scss']
 })
+
+
+
 export class CameraComponent implements OnInit {
 
   fileInput = null;
