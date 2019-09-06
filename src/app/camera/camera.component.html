@@ -1,7 +1,21 @@
 <div class="input">
-    <input id="file-input" type="file" accept="image/*" capture><br>
+    <input [hidden]="isCordova" id="file-input" type="file" accept="image/*" capture><br>
 </div>
 
+<div class="btn-group">
+    <button mat-raised-button [hidden]="!isCordova" id="cameraTakePicture" (click)="takePicture()">TAKE
+        PICTURE</button><br>
+    <button mat-raised-button [hidden]="!isCordova" id="cameraTakePicture" (click)="takeEditablePicture()">TAKE
+        EDITABLE PICTURE</button><br>
+    <button mat-raised-button [hidden]="!isCordova" id="cameraTakePicture" (click)="getLibraryPhoto()">GET PICTURE
+        FROM LIBRARY</button><br>
+    <button mat-raised-button [hidden]="!isCordova" id="cameraTakePicture" (click)="getAlbumPhoto()">GET PICTURE
+        FROM ALBUM</button><br>
+</div>
+
+<img style="display:none;height:400px;" id="smallImage" src="" />
+
 <div class="output">
-    <img [hidden]="!showImg" id="output" height="400" alt="Image from Camera" >
+    <img [hidden]="!showImg" id="output" height="400" alt="Image from Camera">
+    <img [hidden]="!showImg" id="myImage">
 </div>

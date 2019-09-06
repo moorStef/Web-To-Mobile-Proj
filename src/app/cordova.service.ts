@@ -12,6 +12,4 @@ export class CordovaService {
   isCordova = !!getWindow().cordova;
 
   constructor() { }
-
-
 }

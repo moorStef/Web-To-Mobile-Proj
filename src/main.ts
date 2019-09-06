@@ -9,9 +9,8 @@ if (environment.production) {
   enableProdMode();
 }
 
-// declare let window: any;
-
-// const isCordova = !!window.cordova;
+declare let window: any;
+declare let cordova: any;
 
 const isCordova = new CordovaService().isCordova;
 
@@ -37,6 +36,7 @@ const app = {
   onDeviceReady() {
     this.receivedEvent('deviceready');
     bootstrap();
+    window.open = cordova.InAppBrowser.open;
   },
 
   // Update DOM on a Received Event
